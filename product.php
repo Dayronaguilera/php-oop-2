@@ -12,8 +12,6 @@ class Product { // verra ereditata dalle altre classi figlie
 
     protected $productCat; 
 
-
-
     public function getLabel() { // con il get rendiamo visibile il contenuto per poterlo modificare 
         return $this->label;
     }
@@ -41,20 +39,20 @@ class Libri extends Product { // le classi figlie estendono le classi genitore(p
 
 }
 
-class Libri2 extends Product {
+// class Libri2 extends Product {
 
-    public $price = 22;
-    public $page = 1094;
-    public $lenguage = 'italiano';
+//     public $price = 22;
+//     public $page = 1094;
+//     public $lenguage = 'italiano';
 
 
 
-    public function __construct(){
-        $this->label = 'una vita come tante';
-        $this->productCat = 'eBook';
-    }
+//     public function __construct(){
+//         $this->label = 'una vita come tante';
+//         $this->productCat = 'eBook';
+//     }
 
-}
+// }
 
 class Telefonia extends Product {
 
@@ -69,18 +67,18 @@ class Telefonia extends Product {
 
 }
 
-class Telefonia2 extends Product {
+// class Telefonia2 extends Product {
 
-    public $price = 129;
-    public $color = 'white';
+//     public $price = 129;
+//     public $color = 'white';
 
-    public function __construct()
-    {
-        $this->label = 'apple airpods';
-        $this->productCat = 'cuffie';
-    }
+//     public function __construct()
+//     {
+//         $this->label = 'apple airpods';
+//         $this->productCat = 'cuffie';
+//     }
 
-}
+// }
 
 class IA extends Product {
 
@@ -95,19 +93,15 @@ class IA extends Product {
 
 }
 
-class IA2 extends Product {
+// class IA2 extends Product {
 
-    public $price = 22;
-    public $color = 'black';
+//     public $price = 22;
+//     public $color = 'black';
 
-    public function __construct()
-    {
-        $this->label = 'echo dot';
-        $this->productCat = 'altoparlante intelligente';
-    }
+//     public function __construct()
+//     {
+//         $this->label = 'echo dot';
+//         $this->productCat = 'altoparlante intelligente';
+//     }
 
-}
-
-$libri = new libri();
-
-echo $libri->getLabel();
+// }

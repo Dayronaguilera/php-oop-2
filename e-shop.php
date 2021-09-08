@@ -8,26 +8,26 @@
  -->
 <?php 
 
-require_once('products.php');
+require_once('product.php');
+require_once('user.php');
+require_once('userPremium.php');
 
-class ECommerce {
+class EShop {
 
-    public $name;
-    public $dominio;
-    private $product = [];
+    public $name; // di default sara NULL
+    public $dominio; // di default sara NULL
+    private $products = [];
 
     public function __construct( string $nameSite, string $urlSite){ // un costrutto per creare le nostre variabili(value), anche se public 
         $this->name = $nameSite;
         $this->dominio = $urlSite;
     }
     
-    public function addProduct($nameProduct){ // richiamando questa function andremo a pushare il nome all'interno del array 
-        return $this->product[] = $nameProduct;
+    public function addProduct(Product $nameProduct){ // richiamando questa function andremo a pushare il nome all'interno del array 
+        return $this->products[] = $nameProduct;
     }
 
 }
-
-
 
 class User {
 
@@ -44,3 +44,17 @@ class PremiumUser {
 
 }
 
+$ecommerce = new EShop('Amazon','www.amazon.it'); // riampiamo i dati richiesti con costruct
+
+$primoLibro = new libri();
+var_dump($primoLibro); // stampiamo l'oggetto 
+
+echo "<hr/>";
+
+$libro = new Libri();
+$cell = new Telefonia();
+$ia = new IA();
+
+$ecommerce->addProduct($libro);
+
+var_dump($ecommerce);
